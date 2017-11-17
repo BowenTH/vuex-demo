@@ -1,13 +1,23 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <router-view/>
+    <BaseView />  
+    <HelloWorld/>  
+    <Footers />
   </div>
 </template>
 
 <script>
+import BaseView from '@/components/BaseView.vue';
+import HelloWorld from '@/components/HelloWorld.vue';
+import Footers from '@/components/footer.vue';
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    BaseView,
+    HelloWorld,
+    Footers,
+  }
 }
 </script>
 

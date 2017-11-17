@@ -1,28 +1,31 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    
-    <Tab title="tab1"></Tab>
-    <Tab title="tab2"></Tab>
-    <count></count>
+    <h3>
+      <router-link to="/vuex">todo</router-link>
+      <router-link to="/todo">vuex</router-link>
+      <!-- <router-link :to="{name:'todo',params:{id:23}}">
+        <button class="list-button">vuex-demo</button>
+      </router-link> -->
+    </h3>
+    <router-view></router-view>
+    <router-view name="a"></router-view>
+    <router-view name="b"></router-view>
+    <!-- <count></count> -->
   </div>
 </template>
 
 <script>
-import Tab from '@/components/tab'; 
+import Tab from '@/components/tab';
+import Todo from '@/components/todo'; 
 import Count from './count'
 
 export default {
   name: 'HelloWorld',
-  components:{
-  	Tab,Count,
-  },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
-  }
+  }, 
 }
 </script>
 
@@ -41,5 +44,9 @@ li {
 }
 a {
   color: #42b983;
+}
+.list-button{
+  font-size: 25px;
+  border-radius: 5px;
 }
 </style>

@@ -6,6 +6,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store ({
 	state:{
+		time: new Date(),
 		count :4,
 		age : 25,
 		sex: 'female',
@@ -15,6 +16,10 @@ export default new Vuex.Store ({
 		add(state,n){
 			console.info('mutations');
 			state.count += n;
+		},
+		upDateTime(state,title){
+			console.log(title)
+			setInterval(()=>state.time = new Date(),1000);
 		}
 	},
 	// 过滤

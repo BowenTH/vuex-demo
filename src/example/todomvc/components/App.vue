@@ -29,7 +29,7 @@
         {{ remaining | pluralize('item') }} left
       </span>
       <ul class="filters">
-        <li v-for="(val, key) in filters">
+        <li v-for="(val, key) in filters" :key="val.toString()">
           <a :href="'#/' + key"
             :class="{ selected: visibility === key }"
             @click="visibility = key">{{ key | capitalize }}</a>
