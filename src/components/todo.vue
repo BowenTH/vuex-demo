@@ -13,6 +13,11 @@
                 msg: 'first todo',
             }
         },
+        created () {
+            console.log('====================================');
+            console.log('loaded todo.vue');
+            console.log('====================================');
+        }
     }
 </script> 
 
