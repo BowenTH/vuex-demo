@@ -9,7 +9,8 @@
         name:'Todo',
         data() {
             return {
-                msg: 'first todo'
+                title:'todo',
+                msg: 'first todo',
             }
         },
     }
