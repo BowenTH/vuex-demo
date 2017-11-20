@@ -18,4 +18,14 @@ npm run build
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 安装Less
+
+* npm i less less-loader -save-dev
+* 配置loader
+
+``` JSON
+    {
+        test: /\.less$/,
+        loader: "style-loader!css-loader!less-loader",
+    }
+```

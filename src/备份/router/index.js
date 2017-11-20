@@ -1,5 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import HelloWorld from '@/components/HelloWorld'
+import Tab from '@/components/HelloWorld'
+import Vuex from '@/components/vuex'
+import Todo from '@/components/todo'
 
 const First = { template:'<div>first</div>' }
 const Second = { template:'<div>second</div>' }
@@ -30,6 +34,7 @@ export default new Router({
       path: '/vuex',
       components: {
         default: Foo,
+        a: Vuex,
         b: Baz
       }
     }

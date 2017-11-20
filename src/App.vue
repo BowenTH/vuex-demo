@@ -1,22 +1,24 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <BaseView />  
-    <HelloWorld/>  
-    <Footers />
+    <img :src="imgData">
+    <Login /> 
   </div>
 </template>
 
 <script>
-import BaseView from '@/components/BaseView.vue';
-import HelloWorld from '@/components/HelloWorld.vue';
-import Footers from '@/components/footer.vue';
+import imgData from './common/api/logo';
+import Login from './components/Login.vue';
+// const imgUrl = require('./assets/logo.png')
+
 export default {
   name: 'app',
   components: {
-    BaseView,
-    HelloWorld,
-    Footers,
+    Login,
+  },
+  data:function(){
+    return {
+      imgData: imgData
+    }
   }
 }
 </script>
